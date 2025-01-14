@@ -2,6 +2,23 @@
 
 This is a dead simple SFTP server that can be used for downloading files from a remote server.
 
+## Installation
+
+To install the project, simply clone the repository and install the dependencies using the following command:
+
+```bash
+pnpm install
+```
+
+This will install the dependencies and you are ready to go.
+
+## Requirements
+
+The following are the requirements for the project:
+
+- Node.js - >= v20.6.0, I use the built-in Node.js `--env-file` flag to load the environment variables from the `.env` file.
+- pnpm - >= v6.7.0, I use pnpm as the package manager for the project.
+
 ## Usage
 
 Simply Run the project using the following command:
