@@ -1,0 +1,8 @@
+# Files
+*.env*
+*.csv
+
+
+# Directories
+node_modules
+dist

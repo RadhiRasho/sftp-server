@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        // Enable latest features
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleDetection": "force",
+        "allowJs": true,
+        // Bundler mode
+        "moduleResolution": "NodeNext",
+        "allowArbitraryExtensions": true,
+        // Best practices
+        "strict": true,
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true,
+        "declaration": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "src/**/*.ts",
+        "globals.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

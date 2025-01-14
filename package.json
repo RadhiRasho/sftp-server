@@ -1,0 +1,28 @@
+{
+	"author": "Radhi Rasho",
+	"dependencies": {
+		"cli-progress": "latest",
+		"ssh2-sftp-client": "latest"
+	},
+	"description": "Dead Simple SFTP Server to download files built with Node.js",
+	"devDependencies": {
+		"@types/cli-progress": "latest",
+		"@types/node": "latest",
+		"@types/ssh2-sftp-client": "latest",
+		"typescript": "latest"
+	},
+	"engines": {
+		"node": ">=20",
+		"npm": "please-use-pnpm",
+		"pnpm": ">=8"
+	},
+	"keywords": [],
+	"license": "MIT",
+	"main": "index.js",
+	"name": "sftp-server",
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc && node --env-file=.env dist/index.js"
+	},
+	"version": "1.0.0"
+}
