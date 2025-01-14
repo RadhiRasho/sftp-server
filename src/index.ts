@@ -6,11 +6,11 @@ import { SftpClient } from "./sftp_client";
 async function main() {
 	const client = new SftpClient();
 	const homeDir = process.env.HOMEPATH || process.env.USERPROFILE;
-	const pathToKey = join(homeDir, ".ssh/wellsfargo_sftp_key");
+	const pathToKey = join(homeDir, process.env.SFTP_PRIVATE_KEY_PATH);
 
 	const config: ConnectOptions = {
-		host: process.env.SFTP_SITE,
-		port: Number.parseInt(process.env.PORT) ?? 10022,
+		host: process.env.SFTP_HOST,
+		port: Number.parseInt(process.env.SFTP_PORT) ?? 10022,
 		username: process.env.SFTP_USERNAME,
 		password: process.env.SFTP_PASSWORD,
 		privateKey: await readFile(pathToKey),
@@ -21,7 +21,7 @@ async function main() {
 		console.log("Connecting to the server...");
 		await client.connect(config);
 
-		const remoteDir = process.env.SFTP_DIR;
+		const remoteDir = process.env.SFTP_REMOTE_PATH;
 		const files = await client.listFiles(remoteDir);
 		console.log("Files in the remote directory:", files);
 
